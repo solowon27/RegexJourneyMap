@@ -1,45 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>homepage</title>
+    <title>Homepage</title>
     <link rel="stylesheet" href="./styles/css/style.css">
 </head>
-
 <body>
-    <div class="header header-container">
-        <div class="logo">
-            <img src="./Assets/uofu.png" width="75" alt="logo">
+    <div class="container">
+        <div class="item header"></div>
+        <div class="item sidebar">
+            <p class="title main-header">Table of contents</p>
+                <div class="table-contents">
+                    <ul>
+                        <li><a href="#section1">Introduction to Regular Expressions</a></li>
+                        <li><a href="#section2">Decoding the Strong Password Regex</a></li>
+                        <li><a href="#section3">Analyzing Each Component</a></li>
+                        <ol>
+                            <li><a href="#section3.1">Minimum Length Requirement</a></li>
+                            <li><a href="#section3.2">Combination of Characters</a></li>
+                            <li><a href="#section3.3">Including Special Characters</a></li>
+                        </ol>
+                        <li><a href="#section4">Constructing the Complete Pattern</a></li>
+                        <li><a href="#section5">Application in Real Projects</a></li>
+                    </ul>
+                </div>
         </div>
-        <div class="heading">
-            <h1> Regex for Strong Passwords</h1>
-        </div>
-        <div class="logo">
-            <img src="./styles/images/github.png" alt="github">
-        </div>
-      </div>
-      <div class="nav">
-        <div class="hamburger" id="hamburger">
-          &#9776;
-        </div>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </div>
-      <div class="container">
-        <div class="sidebar" id="sidebar">
-            
-        </div>
-        <div class="main">
+        <div class="item item2">
+            <img src="./Assets/regex.jpeg" alt="regex">
+            <p class="subtitle">What are Regular Expressions?</p>
+            <article>Regular expression is a group of characters or symbols which is used to find a specific
+                pattern from a text.
 
+                A regular expression is a pattern that is matched against a subject string from left to right.
+                The word "Regular expression" is a
+                mouthful, you will usually find the term abbreviated as "regex" or "regexp". Regular expression
+                is used for replacing a text within
+                a string, validating form, extract a substring from a string based upon a pattern match, and so
+                much more.
+
+                Imagine you are writing an application and you want to set the rules for when a user chooses
+                their username. We want to
+                allow the username to contain letters, numbers, underscores and hyphens. We also want to limit
+                the number of
+                characters in username so it does not look ugly. We use the following regular expression to
+                validate a username:</article>
+                <img src="./Assets/example.png" alt="example">
+                <article>Above regular expression can accept the strings <span>john_doe,</span> <span>jo-hn_doe </span><span>and john12_as.</span> It does
+                    not match <span>Jo</span> because that string
+                    contains uppercase letter and also it is too short.</article>
+                <p class="subtitle">Why are Regular Expressions Important in Web Development?</p>
+                <article>Regular expressions play a crucial role in web development by enabling developers to
+                    validate, extract,
+                    and manipulate textual data efficiently. They are used for tasks like form validation, data
+                    validation,
+                    parsing, and more.</article>
         </div>
-      </div>
-    <script src="./src/index.js"></script>
+        <div class="item footer"></div>
+    </div>
 </body>
-
 </html>
