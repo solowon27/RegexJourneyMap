@@ -51,7 +51,8 @@ body {
 }
 
 img {
-  width: 100%;
+  max-width: 100%;
+  height: auto;
   object-fit: cover;
   border-radius: 5px;
 }
@@ -132,4 +133,55 @@ span {
   border: 1px solid #ddd;
   border-radius: 5px;
   overflow-x: auto;
+}
+
+@media (max-width: 1024px) {
+  body {
+    font-size: 14px;
+  }
+
+  .container {
+    max-width: 960px; 
+    margin: 20px auto;
+    grid-template-columns: 200px 1fr;
+    grid-template-areas:
+      "header header"
+      "sidebar content"
+      "footer footer";
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+
+  }
+
+  .container {
+    max-width: 720px; 
+    margin: 20px auto;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "sidebar"
+      "content"      
+      "footer";
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 12px;
+  }
+
+  .container {
+    max-width: 300px; 
+    margin: 20px auto;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "sidebar"
+      "content"      
+      "footer";
+  }
 }
