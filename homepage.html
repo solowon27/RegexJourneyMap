@@ -49,7 +49,7 @@
         <div class="item item2">
             <img src="./Assets/regex.jpeg" alt="regex">
             <p class="title content-header">Introduction</p>
-            <p class="subtitle" id="section1">What are Regular Expressions?</p>
+            <h1 id="section1">What are Regular Expressions?</h1>
             <article>Regular expression is a group of characters or symbols which is used to find a specific
                 pattern from a text.
 
@@ -78,7 +78,7 @@
                 validation,
                 parsing, and more.</article>
 
-            <p class="title content-header">Decoding the Strong Password Regex</p>
+            <h1 id="section2">Decoding the Strong Password Regex</h1>
             <article>In today's digital age, the security of our online accounts and personal information is
                 paramount. One of the fundamental ways to safeguard our online presence is by using strong and
                 secure passwords. To enforce the creation of strong passwords, websites and applications often
@@ -104,14 +104,14 @@
                 dissecting throughout the
                 tutorial. It prepares you for understanding the various components and criteria of the
                 pattern.<span>In the following example of password regex pattern, you'll notice a combination of
-                    letters, numbers, and special characters. I know it feels like hakutata matata stuff but don't worry
+                    letters, numbers, and special characters. I know it feels like hakuna matata stuff but don't worry
                     we will break it down.</span></article>
             <p class="examples">
                 /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*\W)(?!.* ).{8,}$/
             </p>
             </article>
 
-            <p class="subtitle">Analyzing Each Component</p>
+            <h2 id="section3">Analyzing Each Component</h2>
             <article>You'll delve into the specific requirements that define a strong password, such as
                 length, character
                 combination, and the inclusion of special characters. These criteria contribute to a more
@@ -151,9 +151,10 @@
                 </p>
             </article>
 
-            <article>
-                <h2>Constructing the Complete Pattern</h2>
-                Now that you've explored the individual components of a strong password regex pattern, it's time to put
+
+            <h1 id="section4">Constructing the Complete Pattern</h1>
+            <article> Now that you've explored the individual components of a strong password regex pattern, it's time
+                to put
                 them
                 all together. The following complete pattern combines the criteria for a strong password, including
                 minimum
@@ -167,9 +168,9 @@
                 </p>
             </article>
 
-            <article>
-                <h2>Application in Real Projects</h2>
-                Understanding regex patterns for strong passwords is essential for enhancing security in various
+
+            <h1 id="section5">Application in Real Projects</h1>
+            <article>Understanding regex patterns for strong passwords is essential for enhancing security in various
                 applications.
                 Whether you're developing a registration form, user account system, or any other scenario requiring
                 secure
@@ -180,8 +181,8 @@
                 <h2>Real-World Example of Strong Password Regex Pattern</h2>
                 <p>Let's explore a real-world example of a strong password regex pattern used in an application:</p>
                 <span>Consider the following JavaScript code snippet:</span>
-            
-                    <code class="code">
+
+                <code class="code">
                         <span class="code">// Define the minimum and maximum length for the password</span>
                         var minLength = 8;
                         var maxLength = 16;
@@ -205,11 +206,13 @@
                             // Failure: Password does not meet the requirements
                         }
                     </code>
-                <p>This code constructs a regex pattern that enforces a strong password policy, including minimum and maximum
-                    length, required uppercase and lowercase letters, numerics, and special characters. It's a practical example of
+                <p>This code constructs a regex pattern that enforces a strong password policy, including minimum and
+                    maximum
+                    length, required uppercase and lowercase letters, numerics, and special characters. It's a practical
+                    example of
                     how regex patterns can be applied in real-world applications for enhanced password security.</p>
             </article>
-            
+
         </div>
         <div class="item footer"></div>
     </div>
