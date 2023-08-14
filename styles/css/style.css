@@ -146,17 +146,14 @@ span {
   color: purple; 
 }
 
-.code {
-  background-color: #64646471;
-  padding: 10px;
+.code-example {
+  width: 100%;
+  background-color: #f7f7f7;
   border: 1px solid #ddd;
   border-radius: 5px;
+  padding: 10px;
   overflow-x: auto;
-  font-family: 'Courier New', monospace;
-  font-size: 14px;
-  display: block; 
-  margin: 10px 0; 
-  text-align: left;
+  margin: 20px 0; 
 }
 
 .modal {
@@ -285,7 +282,11 @@ button {
       "content"
       "footer";
   }
+    .code-example {
+        font-size: 14px; 
+    }
 }
+
 
 @media (max-width: 480px) {
   body {
@@ -309,4 +310,7 @@ button {
     object-fit: cover;
     border-radius: 5px;
   }
+  .code-example {
+    font-size: 14px; 
+}
 }
