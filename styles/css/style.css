@@ -81,6 +81,18 @@ img {
   text-decoration: none;
 }
 
+#table-contents li{
+  border: 1px solid #ddd;
+}
+#table-contents li:hover{
+  background-color: #0faada;
+}
+
+.table-contents a {
+  display: block;
+  padding: 10px;
+  color: #333;
+}
 .title {
   font-size: 1.5rem;
   margin-bottom: 10px;
@@ -89,6 +101,7 @@ img {
 
 .subtitle {
   font-size: 1.2rem;
+  font-weight: bold;
   margin-bottom: 10px;
 }
 
