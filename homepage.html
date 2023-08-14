@@ -38,30 +38,9 @@
                     </ol>
                     <li><a href="#" data-target="#section4">Constructing the Complete Pattern</a></li>
                     <li><a href="#" data-target="#section5">Application in Real Projects</a></li>
-                    <li><a href="#" data-target="#section6">Summary</a></li>
+                    <li><a href="#" data-target="#section6">test</a></li>
+                    <li><a href="#" data-target="#section7">Summary</a></li>
                 </ul>
-                <code class="popup"><a id="popup-link" href="#">Click here for recommended regex tutors</a></code>
-
-                <div id="myModal" class="modal">
-                    <div class="modal-content">
-                        <span class="close">&times;</span>
-                        <p>These are some of the recommended regex tutors:</p>
-                        <ul>
-                            <li><a href="https://dev.to/tbhaxor/motivation-for-inventing-regular-expression-1kib">Introduction
-                                    and History of Regular Expression</li></a>
-                            <li><a href="https://dev.to/heymde/learn-basic-regex-from-examples-2o9d">Learn basic regex
-                                    from examples.</li></a>
-                            <li><a href="https://dev.to/redbit/capture-groups-in-regular-expressions-4g7o">Capture
-                                    groups in regular expressions.</li></a>
-                            <li><a
-                                    href="https://learn.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-language-quick-reference">Regular
-                                    Expression Language - Quick Reference</li></a>
-                            <li><a
-                                    href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">Regular
-                                    Expressions MDN</li></a>
-                        </ul>
-                    </div>
-                </div>
             </div>
         </div>
         <div class="item item2">
@@ -251,43 +230,74 @@
 
             <p>I want to remind you of some basic rules of regex patterns before I summarize this article.</p>
             <p><strong>Be careful with these rules:</strong></p>
-            <ol>
-                <li><strong>^</strong> indicates the beginning of the string. <strong>$</strong> indicates the end of
-                    the string.
-                    If we don't use these ^ & $, the regex will not be able to determine the maximum length of the
-                    password.
-                    In the above example, we have a condition that the password can't be longer than 16 characters. To
-                    make
-                    that condition work, we have used these ^ & $.</li>
-                <li><strong>Remove maximum length restriction:</strong> Instead of <code>.{8,16}</code>, if we used
-                    <code>.{8,}</code>,
-                    it would mean that the password must be at least 8 characters long. So, there will not be any
-                    condition for
-                    checking the maximum length of the password.
-                </li>
-                <li><strong>Don't accept any number (digit):</strong> Instead of <code>(?=.*[0-9])</code>, if we used
-                    <code>(?!.*[0-9])</code>,
-                    it would mean that the password must not contain any digit from 0 to 9 (Difference with the
-                    <code>(?=.*[0-9])</code> is
-                    the use of <code>!</code> instead of <code>=</code>).
-                </li>
-                <li><strong>Don't accept any special character:</strong> Instead of <code>(?=.*\W)</code>, if we used
-                    <code>(?!.*\W)</code>,
-                    it would mean that the password must not contain any special characters (The difference with the
-                    <code>(?=.*\W)</code> is
-                    the use of <code>!</code> instead of <code>=</code>).
-                </li>
-                <li><strong>Alternative Syntax for number (digit):</strong> Instead of <code>(?=.*[0-9])</code>, we
-                    could have used
-                    <code>(?=.*\d)</code>. <code>(?=.*\d)</code> also means that the password must contain a single
-                    digit from 0 to 9.
-                </li>
-            </ol>
-            <p>So, that's all for this article. I hope you have understood the concept of strong password regex pattern.
-                Thanks
-                for reading.</p>
+            <div class="summary-message">
+                <ol>
+                    <li><strong> indicate '^' at the beginning of the string. indicate '$' at the end of
+                            the string.</strong>
+                        If we don't use these ^ & $, the regex will not be able to determine the maximum length of the
+                        password.
+                        In the above example, we have a condition that the password can't be longer than 16 characters.
+                        To
+                        make
+                        that condition work, we have used these ^ & $.</li>
+                    <li><strong>Remove maximum length restriction:</strong> Instead of <code>.{8,16}</code>, if we used
+                        <code>.{8,}</code>,
+                        it would mean that the password must be at least 8 characters long. So, there will not be any
+                        condition for
+                        checking the maximum length of the password.
+                    </li>
+                    <li><strong>Don't accept any number (digit):</strong> Instead of <code>(?=.*[0-9])</code>, if we
+                        used
+                        <code>(?!.*[0-9])</code>,
+                        it would mean that the password must not contain any digit from 0 to 9 (Difference with the
+                        <code>(?=.*[0-9])</code> is
+                        the use of <code>!</code> instead of <code>=</code>).
+                    </li>
+                    <li><strong>Don't accept any special character:</strong> Instead of <code>(?=.*\W)</code>, if we
+                        used
+                        <code>(?!.*\W)</code>,
+                        it would mean that the password must not contain any special characters (The difference with the
+                        <code>(?=.*\W)</code> is
+                        the use of <code>!</code> instead of <code>=</code>).
+                    </li>
+                    <li><strong>Alternative Syntax for number (digit):</strong> Instead of <code>(?=.*[0-9])</code>, we
+                        could have used
+                        <code>(?=.*\d)</code>. <code>(?=.*\d)</code> also means that the password must contain a single
+                        digit from 0 to 9.
+                    </li>
+                </ol>
+            </div>
+            <p>So, that's all for this article. I hope you have understood the concept of strong password regex pattern. Thanks for reading.</p>
+            
+            <p id="about"><a id="popup-link" href="#">About the author</p></a>
+                <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h3>About the author</h3>
+                    <div class="author">
+                        <img class="rounded-circle mb-3 fit-cover" width="130" height="130" src="./Assets/author.jpeg" alt="author picture">
+                    </div>
+                    <div class="paragraph">
+                      <p> My name is <span>Solomon Tegegne</span> I am currently student @ <span class="red">University of Utah Coding Bootcamp.</span> I am 
+                        a full-stack web developer. you can find me on the following social media.</p>
+                    </div>                    
+                    <div class="contactme">
+                    <div class="socialmedia">
+                        <img src="./Assets/linkedin.png" width="50" alt="linkedin img">
+                    </div>
+                        <div class="socialmedia">
+                            <a href="https://dev.to/tbhaxor/motivation-for-inventing-regular-expression-1kib"><img src="./Assets/github.png" width="50" alt="github pic"></a>
+                        </div>
+                        <div class="socialmedia">
+                            <a href="https://dev.to/heymde/learn-basic-regex-from-examples-2o9d"><img src="./Assets/twitter.png" width="50" alt="twitter pic"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="item footer"></div>
+        <div class="item footer">
+            <p>Solomon Tegegne &copy; Aug, 2023 with <span id="footer">University of Utah Coding Bootcamp</span></p>
+        </div>
     </div>
     <script src="./styles/js/index.js"></script>
 </body>
