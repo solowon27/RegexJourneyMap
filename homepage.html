@@ -28,19 +28,19 @@
             <p class="title main-header">Table of contents</p>
             <div class="table-contents">
                 <ul id="table-contents">
-                    <li><a href="#section1">Introduction to Regular Expressions</a></li>
-                    <li><a href="#section2">Decoding the Strong Password Regex</a></li>
-                    <li><a href="#section3">Analyzing Each Component</a></li>
+                    <li><a href="#" data-target="#section1">Introduction to Regular Expressions</a></li>
+                    <li><a href= "#" data-target="#section2">Decoding the Strong Password Regex</a></li>
+                    <li><a href= "#" data-target="#section3">Analyzing Each Component</a></li>
                     <ol>
-                        <li><a href="#section-a">Minimum Length Requirement</a></li>
-                        <li><a href="#section-b">Combination of Characters</a></li>
-                        <li><a href="#section-c">Including Special Characters</a></li>
+                        <li><a href="#" data-target="#section-a">Minimum Length Requirement</a></li>
+                        <li><a href="#" data-target="#section-b">Combination of Characters</a></li>
+                        <li><a href="#" data-target="#section-c">Including Special Characters</a></li>
                     </ol>
-                    <li><a href="#section4">Constructing the Complete Pattern</a></li>
-                    <li><a href="#section5">Application in Real Projects</a></li>
-                    <li><a href="#section6">Summary</a></li>
+                    <li><a href= "#" data-target="#section4">Constructing the Complete Pattern</a></li>
+                    <li><a href= "#" data-target="#section5">Application in Real Projects</a></li>
+                    <li><a href= "#" data-target="#section6">Summary</a></li>
                 </ul>      
-        <code><a id="popup-link" href="#">Click here for recommended regex tutors</a></code>
+        <code class="popup"><a id="popup-link" href="#">Click here for recommended regex tutors</a></code>
     
             <div id="myModal" class="modal">
                 <div class="modal-content">
@@ -139,25 +139,10 @@
                 <p class="examples">
                     /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*\W)(?!.* ).<span class="modifier">{8,}</span>$/
                 </p>
-                <p> for breaking down the above regex pattern let's see what each component does, so you can understand
-                    it easily for future use.</p>
-                <ul>
-                    <li><span class="modifier">{8,}</span> - this component specifies the minimum length of the
-                        password.</li>
-                    <li><span class="modifier">^</span> - this component specifies the start of the string.</li>
-                    <li><span class="modifier">(?=.*[0-9])</span> - this component specifies that the password must
-                        contain at least one digit.</li>
-                    <li><span class="modifier">(?=.*[a-z])</span> - this component specifies that the password must
-                        contain at least one lowercase letter.</li>
-                    <li><span class="modifier">(?=.*[A-Z])</span> - this component specifies that the password must
-                        contain at least one uppercase letter.</li>
-                    <li><span class="modifier">(?=.*\W)</span> - this component specifies that the password must
-                        contain at least one special character.</li>
-                    <li><span class="modifier">(?!.* )</span> - this component specifies that the password must not
-                        contain any whitespace.</li>
-                    <li><span class="modifier">.{8,}</span> - this component specifies that the password must be at
-                        least 8 characters long.</li>
-                    <li><span class="modifier">$</span> - this component specifies the end of the string.</li>
+                <p>In this case as you can see the highlighted part of the regex pattern is <code>.{8,}</code> which means
+                    that the password must be at least 8 characters long. If you want to set a maximum length for the
+                    password, you can use <code>.{8,16}</code> which means that the password must be at least 8 characters
+                    long and can't be longer than 16 characters.</p>
             </article>
 
             <article>
@@ -169,6 +154,8 @@
                     /^(?=.*<span class="digit">[0-9]</span>)(?=.*<span class="lowercase">[a-z]</span>)(?=.*<span
                         class="uppercase">[A-Z]</span>)(?=.*\W)(?!.* ).{8,}$/
                 </p>
+                <p>and all these highlighted parts of the regex pattern are the conditions for the password which combine all characters. The password
+                    must contain at least one digit, one lowercase letter, one uppercase letter, and so on.</p>
             </article>
 
             <article>
@@ -179,6 +166,9 @@
                 <p class="examples">
                     /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*<span class="special-char">\W</span>)(?!.* ).{8,}$/
                 </p>
+                <p>here <strong>\W</strong> refers to any non-word character. It matches any character that is not a
+                    word character from the basic Latin alphabet. Equivalent to <code>[^A-Za-z0-9_]</code>. which means
+                    that the password must contain at least one special character.</p>
             </article>
 
 
@@ -196,6 +186,8 @@
                         class="uppercase">[A-Z]</span>)(?=.*<span class="special-char">\W</span>)(?!.* ).<span
                         class="modifier">{8,16}</span>$/
                 </p>
+                <p>And now we have a complete regex pattern for strong passwords. This pattern can be used to validate
+                    strong passwords.</p>
             </article>
 
 
