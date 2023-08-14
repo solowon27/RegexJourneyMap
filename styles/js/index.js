@@ -3,11 +3,22 @@ function navigateToHomepage() {
     window.location.href = 'homepage.html';
   }
   
+  const modal = document.getElementById("myModal");
+        const popupLink = document.getElementById("popup-link");
+        const closeButton = document.querySelector(".close");
 
-    const hamburger = document.getElementById('hamburger');
-    const nav = document.querySelector('.nav ul'); // Changed this line
+        popupLink.addEventListener("click", function(event) {
+            event.preventDefault();
+            modal.style.display = "block";
+        });
 
-    hamburger.addEventListener('click', () => {
-      nav.classList.toggle('active');
-    });
+        closeButton.addEventListener("click", function() {
+            modal.style.display = "none";
+        });
 
+        window.addEventListener("click", function(event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        });
+  
