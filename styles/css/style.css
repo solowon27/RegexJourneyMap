@@ -84,9 +84,14 @@ img {
 #table-contents li{
   border: 1px solid #ddd;
 }
-#table-contents li:hover{
+#table-contents li:hover {
   background-color: #ff5733;
 }
+
+#table-contents a:visited {
+  color: rgb(64, 7, 129);
+}
+
 
 .table-contents a {
   display: block;
@@ -180,6 +185,16 @@ span {
   cursor: pointer;
 }
 
+.highlighted {
+  background-color: #ff5733; 
+  transition: background-color 0.3s ease; 
+}
+
+#popup-link {
+  background-color: #ff5733;
+  border: 1px solid #087ec2;
+  border-radius: 10px;
+}
 
 @media (max-width: 960px) {
   body {
