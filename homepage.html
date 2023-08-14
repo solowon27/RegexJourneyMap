@@ -29,32 +29,39 @@
             <div class="table-contents">
                 <ul id="table-contents">
                     <li><a href="#" data-target="#section1">Introduction to Regular Expressions</a></li>
-                    <li><a href= "#" data-target="#section2">Decoding the Strong Password Regex</a></li>
-                    <li><a href= "#" data-target="#section3">Analyzing Each Component</a></li>
+                    <li><a href="#" data-target="#section2">Decoding the Strong Password Regex</a></li>
+                    <li><a href="#" data-target="#section3">Analyzing Each Component</a></li>
                     <ol>
                         <li><a href="#" data-target="#section-a">Minimum Length Requirement</a></li>
                         <li><a href="#" data-target="#section-b">Combination of Characters</a></li>
                         <li><a href="#" data-target="#section-c">Including Special Characters</a></li>
                     </ol>
-                    <li><a href= "#" data-target="#section4">Constructing the Complete Pattern</a></li>
-                    <li><a href= "#" data-target="#section5">Application in Real Projects</a></li>
-                    <li><a href= "#" data-target="#section6">Summary</a></li>
-                </ul>      
-        <code class="popup"><a id="popup-link" href="#">Click here for recommended regex tutors</a></code>
-    
-            <div id="myModal" class="modal">
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <p>These are some of the recommended regex tutors:</p>
-                    <ul>
-                        <li><a href="https://dev.to/tbhaxor/motivation-for-inventing-regular-expression-1kib">Introduction and History of Regular Expression</li></a>
-                        <li><a href="https://dev.to/heymde/learn-basic-regex-from-examples-2o9d">Learn basic regex from examples.</li></a>
-                        <li><a href="https://dev.to/redbit/capture-groups-in-regular-expressions-4g7o">Capture groups in regular expressions.</li></a>
-                        <li><a href="https://learn.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-language-quick-reference">Regular Expression Language - Quick Reference</li></a>
-                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">Regular Expressions MDN</li></a>
-                    </ul>
+                    <li><a href="#" data-target="#section4">Constructing the Complete Pattern</a></li>
+                    <li><a href="#" data-target="#section5">Application in Real Projects</a></li>
+                    <li><a href="#" data-target="#section6">Summary</a></li>
+                </ul>
+                <code class="popup"><a id="popup-link" href="#">Click here for recommended regex tutors</a></code>
+
+                <div id="myModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <p>These are some of the recommended regex tutors:</p>
+                        <ul>
+                            <li><a href="https://dev.to/tbhaxor/motivation-for-inventing-regular-expression-1kib">Introduction
+                                    and History of Regular Expression</li></a>
+                            <li><a href="https://dev.to/heymde/learn-basic-regex-from-examples-2o9d">Learn basic regex
+                                    from examples.</li></a>
+                            <li><a href="https://dev.to/redbit/capture-groups-in-regular-expressions-4g7o">Capture
+                                    groups in regular expressions.</li></a>
+                            <li><a
+                                    href="https://learn.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-language-quick-reference">Regular
+                                    Expression Language - Quick Reference</li></a>
+                            <li><a
+                                    href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">Regular
+                                    Expressions MDN</li></a>
+                        </ul>
+                    </div>
                 </div>
-            </div>                       
             </div>
         </div>
         <div class="item item2">
@@ -139,9 +146,11 @@
                 <p class="examples">
                     /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*\W)(?!.* ).<span class="modifier">{8,}</span>$/
                 </p>
-                <p>In this case as you can see the highlighted part of the regex pattern is <code>.{8,}</code> which means
+                <p>In this case as you can see the highlighted part of the regex pattern is <code>.{8,}</code> which
+                    means
                     that the password must be at least 8 characters long. If you want to set a maximum length for the
-                    password, you can use <code>.{8,16}</code> which means that the password must be at least 8 characters
+                    password, you can use <code>.{8,16}</code> which means that the password must be at least 8
+                    characters
                     long and can't be longer than 16 characters.</p>
             </article>
 
@@ -154,7 +163,8 @@
                     /^(?=.*<span class="digit">[0-9]</span>)(?=.*<span class="lowercase">[a-z]</span>)(?=.*<span
                         class="uppercase">[A-Z]</span>)(?=.*\W)(?!.* ).{8,}$/
                 </p>
-                <p>and all these highlighted parts of the regex pattern are the conditions for the password which combine all characters. The password
+                <p>and all these highlighted parts of the regex pattern are the conditions for the password which
+                    combine all characters. The password
                     must contain at least one digit, one lowercase letter, one uppercase letter, and so on.</p>
             </article>
 
@@ -202,31 +212,27 @@
             <article>
                 <h2>Real-World Example of Strong Password Regex Pattern</h2>
                 <p>Let's explore a real-world example of a strong password regex pattern used in an application:</p>
-                <span>Consider the following JavaScript code snippet:</span>
+                <span>Consider the following JavaScript code snippet:</span><br>
 
                 <code class="code">
-                        <span class="code">// Define the minimum and maximum length for the password</span>
-                        var minLength = 8;
-                        var maxLength = 16;
-            
-                        <span class="code">// Define the minimum requirements for uppercase letters, lowercase letters, numerics, and special characters</span>
-                        var minUpperCase = 1;
-                        var minLowerCase = 1;
-                        var minNumerics = 1;
-                        var minSpecialChars = 1;
-            
-                        <span class="code">// Construct the regex pattern</span>
-                        var regularExpression = new RegExp("^^(?=.*[A-Z]{"+minUpperCase+",})" +
-                            "(?=.*[a-z]{"+minLowerCase+",})(?=.*[0-9]{"+minNumerics+",})" +
-                            "(?=.*[!@#$\-_?.:{]{"+minSpecialChars+",})" +
-                            "[a-zA-Z0-9!@#$\-_?.:{]{"+minLength+","+maxLength+"}$");
-            
-                        <span class="code">// Check if the password matches the regex pattern</span>
-                        if (pswd.match(regularExpression)) {
-                            // Success: Password meets the requirements
-                        } else {
-                            // Failure: Password does not meet the requirements
+                    <span style="color: #e91e63;">function</span> <span style="color: #6200ea;">validatePassword</span>() {<br>
+                        <span style="color: #3f51b5;">// Get the value entered in the password input field</span><br>
+                        <span style="color: #009688;">const</span> passwordInput = <span style="color: #673ab7;">document</span>.<span style="color: #6200ea;">getElementById</span>('passwordInput').<span style="color: #6200ea;">value</span>;<br>
+                    
+                        <span style="color: #3f51b5;">// Define a regex pattern for strong passwords</span><br>
+                        <span style="color: #009688;">const</span> regex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@#$%^&!])[A-Za-z\d@#$%^&!]{8,}$/;<br>
+                    
+                        <span style="color: #3f51b5;">// Test the entered password against the regex pattern</span><br>
+                        <span style="color: #e91e63;">if</span> (regex.test(passwordInput)) {<br>
+                            <span style="color: #3f51b5;">// Display a success message if the password is valid</span><br>
+                            <span style="color: #673ab7;">document</span>.<span style="color: #6200ea;">getElementById</span>('validationResult').<span style="color: #6200ea;">textContent</span> = <span style="color: #a10000;">'Password is valid!'</span>;<br>
+                            <span style="color: #673ab7;">document</span>.<span style="color: #6200ea;">getElementById</span>('validationResult').<span style="color: #6200ea;">style.color</span> = <span style="color: #00a300;">'green'</span>;<br>
+                        } <span style="color: #e91e63;">else</span> {<br>
+                            <span style="color: #3f51b5;">// Display an error message if the password is invalid</span>
+                            <span style="color: #673ab7;">document</span>.<span style="color: #6200ea;">getElementById</span>('validationResult').<span style="color: #6200ea;">textContent</span> = <span style="color: #a10000;">'Password is invalid!'</span>;<br>
+                            <span style="color: #673ab7;">document</span>.<span style="color: #6200ea;">getElementById</span>('validationResult').<span style="color: #6200ea;">style.color</span> = <span style="color: #ff0000;">'red'</span>;<br>
                         }
+                    }
                     </code>
                 <p>This code constructs a regex pattern that enforces a strong password policy, including minimum and
                     maximum
@@ -234,32 +240,56 @@
                     example of
                     how regex patterns can be applied in real-world applications for enhanced password security.</p>
             </article>
-            <h1 id="section6">Summary</h1>
+            <h1 id="section6">test</h1>
+            <div class="test">
+                <code>minimum 8 characters with at least one letter, one digit, and one special character</code><br>
+                <input type="password" id="passwordInput" placeholder="Enter a password">
+                <button onclick="validatePassword()">Validate</button>
+                <p id="validationResult"></p>
+            </div>
+            <h1 id="section7">Summary</h1>
 
             <p>I want to remind you of some basic rules of regex patterns before I summarize this article.</p>
             <p><strong>Be careful with these rules:</strong></p>
             <ol>
-                <li><strong>^</strong> indicates the beginning of the string. <strong>$</strong> indicates the end of the string.
-                    If we don't use these ^ & $, the regex will not be able to determine the maximum length of the password.
-                    In the above example, we have a condition that the password can't be longer than 16 characters. To make
+                <li><strong>^</strong> indicates the beginning of the string. <strong>$</strong> indicates the end of
+                    the string.
+                    If we don't use these ^ & $, the regex will not be able to determine the maximum length of the
+                    password.
+                    In the above example, we have a condition that the password can't be longer than 16 characters. To
+                    make
                     that condition work, we have used these ^ & $.</li>
-                <li><strong>Remove maximum length restriction:</strong> Instead of <code>.{8,16}</code>, if we used <code>.{8,}</code>,
-                    it would mean that the password must be at least 8 characters long. So, there will not be any condition for
-                    checking the maximum length of the password.</li>
-                <li><strong>Don't accept any number (digit):</strong> Instead of <code>(?=.*[0-9])</code>, if we used <code>(?!.*[0-9])</code>,
-                    it would mean that the password must not contain any digit from 0 to 9 (Difference with the <code>(?=.*[0-9])</code> is
-                    the use of <code>!</code> instead of <code>=</code>).</li>
-                <li><strong>Don't accept any special character:</strong> Instead of <code>(?=.*\W)</code>, if we used <code>(?!.*\W)</code>,
-                    it would mean that the password must not contain any special characters (The difference with the <code>(?=.*\W)</code> is
-                    the use of <code>!</code> instead of <code>=</code>).</li>
-                <li><strong>Alternative Syntax for number (digit):</strong> Instead of <code>(?=.*[0-9])</code>, we could have used
-                    <code>(?=.*\d)</code>. <code>(?=.*\d)</code> also means that the password must contain a single digit from 0 to 9.</li>
+                <li><strong>Remove maximum length restriction:</strong> Instead of <code>.{8,16}</code>, if we used
+                    <code>.{8,}</code>,
+                    it would mean that the password must be at least 8 characters long. So, there will not be any
+                    condition for
+                    checking the maximum length of the password.
+                </li>
+                <li><strong>Don't accept any number (digit):</strong> Instead of <code>(?=.*[0-9])</code>, if we used
+                    <code>(?!.*[0-9])</code>,
+                    it would mean that the password must not contain any digit from 0 to 9 (Difference with the
+                    <code>(?=.*[0-9])</code> is
+                    the use of <code>!</code> instead of <code>=</code>).
+                </li>
+                <li><strong>Don't accept any special character:</strong> Instead of <code>(?=.*\W)</code>, if we used
+                    <code>(?!.*\W)</code>,
+                    it would mean that the password must not contain any special characters (The difference with the
+                    <code>(?=.*\W)</code> is
+                    the use of <code>!</code> instead of <code>=</code>).
+                </li>
+                <li><strong>Alternative Syntax for number (digit):</strong> Instead of <code>(?=.*[0-9])</code>, we
+                    could have used
+                    <code>(?=.*\d)</code>. <code>(?=.*\d)</code> also means that the password must contain a single
+                    digit from 0 to 9.
+                </li>
             </ol>
-            <p>So, that's all for this article. I hope you have understood the concept of strong password regex pattern. Thanks
+            <p>So, that's all for this article. I hope you have understood the concept of strong password regex pattern.
+                Thanks
                 for reading.</p>
         </div>
         <div class="item footer"></div>
     </div>
     <script src="./styles/js/index.js"></script>
 </body>
+
 </html>
