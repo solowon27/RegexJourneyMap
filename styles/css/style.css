@@ -152,10 +152,9 @@ span {
   overflow-x: auto;
   font-family: 'Courier New', monospace;
   font-size: 14px;
-  line-height: 1.4;
-  white-space: pre-wrap;
   display: block; 
   margin: 10px 0; 
+  text-align: left;
 }
 
 .modal {
@@ -194,6 +193,25 @@ span {
   background-color: #ff5733;
   border: 1px solid #087ec2;
   border-radius: 10px;
+}
+
+
+input {
+  padding: 5px;
+  margin-right: 10px;
+}
+
+button {
+  padding: 5px 10px;
+  background-color: #ff5733;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#validationResult {
+  margin-top: 10px;
+  font-weight: bold;
 }
 
 @media (max-width: 960px) {
