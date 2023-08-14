@@ -45,6 +45,21 @@ function navigateToHomepage() {
               }
            });
         });
+
+        //validator function
+        function validatePassword() {
+            const passwordInput = document.getElementById('passwordInput').value;
+            const regex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@#$%^&!])[A-Za-z\d@#$%^&!]{8,}$/; 
+        
+            if (regex.test(passwordInput)) {
+                document.getElementById('validationResult').textContent = 'Password is valid!';
+                document.getElementById('validationResult').style.color = 'green';
+            } else {
+                document.getElementById('validationResult').textContent = 'Password is invalid!';
+                document.getElementById('validationResult').style.color = 'red';
+            }
+        }
+        
         
 
   
